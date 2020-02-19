@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="action_jurusan_list">
+            <field name="name">Daftar jurusan</field>
+            <field name="res_model">academic.jurusan</field>
+            <field name="view_mode">tree,form</field>
+            
+            
+            <field name ="help" type="html">
+                <p class="oe_view_noncontent_create">
+                klik untuk memasukkan jurusan
+                </p>
+                <p>klik tombol create untuk membuat jurusan baru</p>
+            </field>
+
+        </record>
+
+
+        <menuitem id="siakad_0"
+            name="SIAKAD"
+            sequence="20"
+        />
+
+        <menuitem id="siakad_1"
+        name="SIAKAD"
+        parent="siakad_0"
+        sequence="20"
+        />
+
+        <menuitem id="menu_siakad_jurusan"
+            name    = "course"
+            parent  = "siakad_1"
+            action  = "action_jurusan_list" 
+            sequence= "20"
+        />
+
+    </data>
+</odoo>
